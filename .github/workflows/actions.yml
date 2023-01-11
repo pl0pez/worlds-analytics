@@ -14,4 +14,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v4
+      - name: echo "Running analytics!"
+        run: python src/analytics.py
       - run: echo "🍏 This job's status is ${{ job.status }}."
