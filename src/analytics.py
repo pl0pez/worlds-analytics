@@ -36,10 +36,11 @@ def team_picks(data, name, side, top=5):
 
 def main():
     if sys.argv: 
-        args = sys.argv[0]
-    else: args = []
+        data = load_data(sys.argv[0])
+    else: 
+        data = load_data()
     
-    data = load_data(args[0])
+    
     print(data.head())
     
     # Columns info
