@@ -35,11 +35,10 @@ def team_picks(data, name, side, top=5):
         return count_times(data[(data['Blue']==name) | (data['Red']==name)], pick_columns, top)
 
 def main():
-    if sys.argv: 
-        data = load_data(sys.argv[0])
-    else: 
-        data = load_data()
-    
+    # if sys.argv: 
+    #     data = load_data(sys.argv[0])
+    # else: 
+    data = load_data()
     
     print(data.head())
     
